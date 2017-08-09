@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import Title from '../components/Title'
 import StudentItem from './StudentItem'
 
@@ -13,13 +14,16 @@ class BatchesContainer extends PureComponent {
         <header>
           <Title content="Batch # 9" />
         </header>
-
         <main>
-          { this.props.batches.map(this.renderBatch) }
+          {this.props.students.map(this.renderBatch)}
         </main>
       </div>
     )
   }
 }
 
-export default BatchesContainer
+const mapStateToProps = ({ students }) => ({
+  students
+})
+
+export default connect(mapStateToProps)(BatchesContainer)
