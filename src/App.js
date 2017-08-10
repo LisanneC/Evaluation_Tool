@@ -5,7 +5,6 @@ import BatchesContainer from './batches/BatchesContainer'
 
 class App extends PureComponent {
   updateStudent(id, update) {
-    //updateBatch
   }
 
   render() {

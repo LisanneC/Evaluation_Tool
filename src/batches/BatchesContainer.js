@@ -8,6 +8,14 @@ class BatchesContainer extends PureComponent {
     return <StudentItem key={index} { ...batch } />
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log("Submitting form");
+    // // const { studentId } = this.props.params;
+    // const firstName = this.refs.firstName.value;
+    // const lastName = this.refs.lastName.value;
+  }
+
   render() {
     return(
       <div className="batches wrapper">
@@ -15,7 +23,7 @@ class BatchesContainer extends PureComponent {
           <Title content="Batch # 9" />
         </header>
         <main>
-          {this.props.students.map(this.renderBatch)}
+          {this.props.students.map(this.renderBatch) }
         </main>
       </div>
     )
